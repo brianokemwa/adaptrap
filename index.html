@@ -28,29 +28,10 @@
       }
     }
 
-    .blink-border {
-      border: 3px solid red;
-      animation: blink 2s linear infinite;
-    }
-
-    @keyframes blink {
-      0% { border-color: red; }
-      25% { border-color: blue; }
-      50% { border-color: green; }
-      75% { border-color: yellow; }
-      100% { border-color: red; }
-    }
-
     .welcome-message {
       padding: 20px;
       font-size: 18px;
       text-align: center;
-    }
-
-    /* Center align the click link */
-    .click-link-container {
-      display: flex;
-      justify-content: center;
     }
 
     /* Animation to reveal each letter */
@@ -67,38 +48,56 @@
         opacity: 1;
       }
     }
+    
+    .motivation-paragraph {
+      padding: 20px;
+      font-size: 16px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <!-- Paragraph with blinking border -->
-  <div class="blink-border">
-    <p class="welcome-message" id="welcome-text">WELCOME TO OUR COMPANY</p>
+  <!-- Paragraph with welcome text -->
+  <div class="welcome-message" id="welcome-text">WELCOME TO OUR COMPANY</div>
+
+  <!-- Motivational paragraph -->
+  <div class="motivation-paragraph">
+    We are dedicated to providing exceptional services in the field of construction materials. Explore our wide range of products and experience the quality and reliability that sets us apart.
   </div>
 
   <!-- Click link -->
-  <div class="click-link-container">
+  <div style="text-align: center;">
     <a href="adaptrap.html"><h6> Click here to see our website</h6></a>
   </div>
 
   <script>
-    // Get the welcome text element
-    const welcomeText = document.getElementById('welcome-text');
-    // Split the text into an array of characters
-    const letters = welcomeText.textContent.split('');
-    // Clear the original text content
-    welcomeText.textContent = '';
-    // Iterate over each letter
-    letters.forEach((letter, index) => {
-      // Create a span element for each letter
-      const span = document.createElement('span');
-      span.textContent = letter;
-      // Add a class to apply animation
-      span.classList.add('reveal-letter');
-      // Set animation delay for each letter
-      span.style.animationDelay = `${index * 0.1}s`;
-      // Append the span to the welcome text element
-      welcomeText.appendChild(span);
-    });
+    // Function to reveal letters of the welcome text
+    function revealLetters() {
+      // Get the welcome text element
+      const welcomeText = document.getElementById('welcome-text');
+      // Split the text into an array of characters
+      const letters = welcomeText.textContent.split('');
+      // Clear the original text content
+      welcomeText.textContent = '';
+      // Iterate over each letter
+      letters.forEach((letter, index) => {
+        // Create a span element for each letter
+        const span = document.createElement('span');
+        span.textContent = letter;
+        // Add a class to apply animation
+        span.classList.add('reveal-letter');
+        // Set animation delay for each letter
+        span.style.animationDelay = `${index * 0.1}s`;
+        // Append the span to the welcome text element
+        welcomeText.appendChild(span);
+      });
+    }
+
+    // Call the revealLetters function initially
+    revealLetters();
+
+    // Call the revealLetters function every 5 seconds
+    setInterval(revealLetters, 5000);
   </script>
 </body>
 </html>
