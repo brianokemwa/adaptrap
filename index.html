@@ -10,17 +10,7 @@
       font-family: Arial, sans-serif;
       background-size: cover;
       background-position: center;
-      animation: rotateBackground 40s linear infinite, /* Rotate the background images */
-                 changeBackground 40s infinite; /* Slow down the background image transition */
-    }
-
-    @keyframes rotateBackground {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
+      animation: changeBackground 40s infinite; /* Slow down the background image transition */
     }
 
     @keyframes changeBackground {
