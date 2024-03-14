@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adaptrap - Construction Materials</title>
-   </head>
   <style>
-    /* Removed link to style.css for inline styling */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-size: cover;
       background-position: center;
-      animation: changeBackground 20s infinite;
+      animation: changeBackground 40s infinite; /* Slow down the background image transition */
     }
 
     @keyframes changeBackground {
@@ -31,20 +28,11 @@
       }
     }
 
-    /* Removed classes and hover effects (replaced with background animation) */
-    #slider,
-    .enter-website-button,
-    .image-hover {
-      display: none;
+    .blink-border {
+      border: 3px solid red;
+      animation: blink 2s linear infinite;
     }
 
-    marquee {
-      font-size: 2em;
-      color: blue;
-      text-align: center; /* Center the marquee text */
-    }
-    
-    /* CSS for the blinking border */
     @keyframes blink {
       0% { border-color: red; }
       25% { border-color: blue; }
@@ -52,11 +40,7 @@
       75% { border-color: yellow; }
       100% { border-color: red; }
     }
-    .blink-border {
-      border: 3px solid red;
-      animation: blink 2s linear infinite;
-    }
-    /* CSS for the paragraph */
+
     .welcome-message {
       padding: 20px;
       font-size: 18px;
@@ -65,19 +49,21 @@
   </style>
 </head>
 <body>
-  <!-- HTML for the paragraph with blinking border -->
+  <!-- Paragraph with blinking border -->
   <div class="blink-border">
-    <p class="welcome-message">Welcome to our website! We invite you to explore and enjoy our wide range of products. From premium quality goods to exceptional customer service, we strive to provide you with an unforgettable shopping experience. Start browsing now and discover something extraordinary!</p>
+    <p class="welcome-message">Welcome to our website! 
+      <br>
+      We invite you to explore and enjoy our wide range of products. 
+      From premium quality goods to exceptional customer service, we strive to provide you with an unforgettable shopping experience.
+      Start browsing now and discover something extraordinary! for construction</p>
   </div>
-</body>
-  </style>
-</head>
 
-<body>
+  <!-- Marquee -->
   <marquee behavior="alternate">
     <h3>Adaptrap - Construction Materials</h3>
   </marquee>
-  <a href="adaptrap.html"><h6> click here to see our website</h6></a>
-  </body>
 
+  <!-- Click link -->
+  <a href="adaptrap.html"><h6> Click here to see our website</h6></a>
+</body>
 </html>
