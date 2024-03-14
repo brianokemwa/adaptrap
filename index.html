@@ -10,7 +10,8 @@
       font-family: Arial, sans-serif;
       background-size: cover;
       background-position: center;
-      
+      animation: rotateBackground 40s linear infinite, /* Rotate the background images */
+                 changeBackground 40s infinite; /* Slow down the background image transition */
     }
 
     @keyframes rotateBackground {
@@ -39,7 +40,7 @@
 
     .blink-border {
       border: 3px solid red;
-      animation: blink 10s linear infinite;
+      animation: blink 2s linear infinite;
     }
 
     @keyframes blink {
