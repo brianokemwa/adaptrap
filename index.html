@@ -40,7 +40,7 @@
 
     .blink-border {
       border: 3px solid red;
-      animation: blink 4s linear infinite;
+      animation: blink 2s linear infinite;
     }
 
     @keyframes blink {
@@ -62,12 +62,27 @@
       display: flex;
       justify-content: center;
     }
+
+    /* Animation to reveal each letter */
+    .reveal-letter {
+      opacity: 0;
+      animation: reveal 0.5s forwards;
+    }
+
+    @keyframes reveal {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Marquee -->
-  <marquee behavior="alternate">
-    <h3>Adaptrap - Construction Materials</h3>
+  <!-- Marquee with one letter at a time -->
+  <marquee>
+    <h3 id="marquee-text">Adaptrap - Construction Materials</h3>
   </marquee>
 
   <!-- Paragraph with blinking border -->
@@ -83,5 +98,26 @@
   <div class="click-link-container">
     <a href="adaptrap.html"><h6> Click here to see our website</h6></a>
   </div>
+
+  <script>
+    // Get the marquee text element
+    const marqueeText = document.getElementById('marquee-text');
+    // Split the text into an array of characters
+    const letters = marqueeText.textContent.split('');
+    // Clear the original text content
+    marqueeText.textContent = '';
+    // Iterate over each letter
+    letters.forEach((letter, index) => {
+      // Create a span element for each letter
+      const span = document.createElement('span');
+      span.textContent = letter;
+      // Add a class to apply animation
+      span.classList.add('reveal-letter');
+      // Set animation delay for each letter
+      span.style.animationDelay = `${index * 0.1}s`;
+      // Append the span to the marquee text element
+      marqueeText.appendChild(span);
+    });
+  </script>
 </body>
 </html>
