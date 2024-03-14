@@ -70,18 +70,9 @@
   </style>
 </head>
 <body>
-  <!-- Marquee without rotating behavior -->
-  <marquee>
-    <h3 id="marquee-text">Adaptrap - Construction Materials</h3>
-  </marquee>
-
   <!-- Paragraph with blinking border -->
   <div class="blink-border">
-    <p class="welcome-message">Welcome to our website! 
-      <br>
-      We invite you to explore and enjoy our wide range of products. 
-      From premium quality goods to exceptional customer service, we strive to provide you with an unforgettable shopping experience.
-      Start browsing now and discover something extraordinary! for construction</p>
+    <p class="welcome-message" id="welcome-text">WELCOME TO OUR COMPANY</p>
   </div>
 
   <!-- Click link -->
@@ -90,12 +81,12 @@
   </div>
 
   <script>
-    // Get the marquee text element
-    const marqueeText = document.getElementById('marquee-text');
+    // Get the welcome text element
+    const welcomeText = document.getElementById('welcome-text');
     // Split the text into an array of characters
-    const letters = marqueeText.textContent.split('');
+    const letters = welcomeText.textContent.split('');
     // Clear the original text content
-    marqueeText.textContent = '';
+    welcomeText.textContent = '';
     // Iterate over each letter
     letters.forEach((letter, index) => {
       // Create a span element for each letter
@@ -105,8 +96,8 @@
       span.classList.add('reveal-letter');
       // Set animation delay for each letter
       span.style.animationDelay = `${index * 0.1}s`;
-      // Append the span to the marquee text element
-      marqueeText.appendChild(span);
+      // Append the span to the welcome text element
+      welcomeText.appendChild(span);
     });
   </script>
 </body>
