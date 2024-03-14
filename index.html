@@ -10,7 +10,17 @@
       font-family: Arial, sans-serif;
       background-size: cover;
       background-position: center;
-      animation: changeBackground 40s infinite; /* Slow down the background image transition */
+      animation: rotateBackground 40s linear infinite, /* Rotate the background images */
+                 changeBackground 40s infinite; /* Slow down the background image transition */
+    }
+
+    @keyframes rotateBackground {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     @keyframes changeBackground {
@@ -30,7 +40,7 @@
 
     .blink-border {
       border: 3px solid red;
-      animation: blink 2s linear infinite;
+      animation: blink 4s linear infinite;
     }
 
     @keyframes blink {
@@ -46,9 +56,20 @@
       font-size: 18px;
       text-align: center;
     }
+
+    /* Center align the click link */
+    .click-link-container {
+      display: flex;
+      justify-content: center;
+    }
   </style>
 </head>
 <body>
+  <!-- Marquee -->
+  <marquee behavior="alternate">
+    <h3>Adaptrap - Construction Materials</h3>
+  </marquee>
+
   <!-- Paragraph with blinking border -->
   <div class="blink-border">
     <p class="welcome-message">Welcome to our website! 
@@ -58,12 +79,9 @@
       Start browsing now and discover something extraordinary! for construction</p>
   </div>
 
-  <!-- Marquee -->
-  <marquee behavior="alternate">
-    <h3>Adaptrap - Construction Materials</h3>
-  </marquee>
-
   <!-- Click link -->
-  <a href="adaptrap.html"><h6> Click here to see our website</h6></a>
+  <div class="click-link-container">
+    <a href="adaptrap.html"><h6> Click here to see our website</h6></a>
+  </div>
 </body>
 </html>
