@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adaptrap - Official Website</title>
   <style>
-    /* General styling */
+    
     body {
       font-size: 16px;
       margin: 0;
-      background-color: rgb(134, 94, 94); /* Add your background image or color */
+      background-color: rgb(134, 94, 94); 
       background-size: cover;
     }
 
@@ -22,7 +22,7 @@
       height: auto;
     }
 
-    /* Search bar styling */
+    
     input[type="search"] {
       background-color: #b6cccbbe;
       border: 1px solid #da0b50;
@@ -155,21 +155,21 @@
     <table id="materialsTable">
       <style>
         img {
-  width: 50px; /* Adjust the width as needed */
-  height: auto; /* Maintains aspect ratio */
+  width: 50px;
+  height: auto;
 }
 table {
-  border-collapse: collapse; /* Ensures borders don't overlap between cells */
-  border: 1px solid black; /* Adds a solid black border around the entire table */
+  border-collapse: collapse;
+  border: 1px solid black; 
 }
 
 th, td {
-  border: 1px solid #ddd; /* Adds a solid gray border to each table cell */
-  padding: 10px; /* Adds padding around the content within each cell */
+  border: 1px solid #ddd; 
+  padding: 10px; 
 }
 
 th {
-  background-color: #f2f2f2; /* Sets a light gray background color for table headers */
+  background-color: #f2f2f2; 
 }
 
       </style>
@@ -223,22 +223,22 @@ th {
   <br>
     <button>
       <style>button {
-        background-color: white; /* Initial background color */
-        color: black; /* Text color */
-        border: none; /* Remove default border */
-        padding: 10px 20px; /* Padding for spacing */
-        cursor: pointer; /* Sets cursor to pointer on hover */
-        transition: background-color 0.2s ease-in-out; /* Transition effect for hover */
+        background-color: white; 
+        color: black; 
+        border: none; 
+        padding: 10px 20px; 
+        cursor: pointer; 
+        transition: background-color 0.2s ease-in-out; 
       }
       
       button:hover {
-        background-color: #f00; /* Background color on hover (red) */
+        background-color: #f00; 
       }
       
       button:active {
-        background-color: #c00; /* Background color on click (darker red) */
-        transform: scale(0.98); /* Slight scale down on click for visual feedback */
-        transition: transform 0.1s ease-in-out; /* Transition effect for click */
+        background-color: #c00; 
+        transform: scale(0.98); 
+        transition: transform 0.1s ease-in-out; 
       }
       </style>
       Add Selected to Cart</button>
@@ -264,7 +264,6 @@ th {
 
     navLinks.forEach(link => {
       link.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent default link behavior
 
         const targetSection = document.getElementById(link.getAttribute('href').slice(1));
         targetSection.scrollIntoView({ behavior: "smooth" });
